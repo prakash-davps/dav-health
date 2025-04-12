@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DAV-MediRecord</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" style="display: none">
+      <div class="spinner"></div>
+    </div>
+    <!-- Navbar -->
+    <nav class="navbar bg-primary p-1" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/e/eb/DAV_CMC_Logo.svg"
+            alt="DAV public school Logo"
+            width="45px"
+            height="45px"
+            class="d-inline-block align-text-center"
+          />
+          <b>&nbsp; DAV PS, Pakur</b>
+        </a>
+      </div>
+    </nav>
+    <!-- navbar ends -->
+
+    <!-- Form -->
+    <form id="studentForm my-5 ">
+      <div class="container mt-4">
+        <h2 class="text-center">Student Medical Record</h2>
+        <div class="row mb-3">
+          <div class="">
+            <label for="admNo" class="form-label">Admission Number</label>
+          </div>
+          <div class="col-auto">
+            <input
+              type="number"
+              class="form-control col-auto"
+              id="admNo"
+              name="admNo"
+            />
+          </div>
+          <div class="col-auto">
+            <button
+              type="button"
+              class="btn btn-primary col-auto px-3 py-1"
+              id="loadBtn"
+            >
+              Load
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="name" class="form-label">Name:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            name="name"
+            readonly
+          />
+        </div>
+        <!-- Class Section row -->
+        <div class="row mb-3">
+          <div class="col-6">
+            <label for="class">Class:</label>
+            <select id="class" name="class" required>
+              <option value=""></option>
+              <option value="Class Nur">Class Nursery</option>
+              <option value="Class lkg">Class LKG</option>
+              <option value="Class ukg">Class UKG</option>
+              <option value="Class 1">Class 1</option>
+              <option value="Class 2">Class 2</option>
+              <option value="Class 3">Class 3</option>
+              <option value="Class 4">Class 4</option>
+              <option value="Class 5">Class 5</option>
+              <option value="Class 6">Class 6</option>
+              <option value="Class 7">Class 7</option>
+              <option value="Class 8">Class 8</option>
+              <option value="Class 9">Class 9</option>
+              <option value="Class 10">Class 10</option>
+              <option value="Class 11">Class 11</option>
+              <option value="Class 12">Class 12</option>
+              <!-- Add more classes as needed -->
+            </select>
+          </div>
+          <div class="col-6">
+            <label for="section">Section</label>
+            <select id="section" name="section">
+              <option value=""></option>
+              <option value="A">A</option>
+              <option value="B">B</option>
+              <option value="C">C</option>
+              <option value="Sci">Sci</option>
+              <option value="Com">Com</option>
+              <!-- Add more options as needed -->
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label for="problem" class="form-label">Problem</label>
+            <textarea
+              class="form-control"
+              id="problem"
+              name="problem"
+            ></textarea>
+          </div>
+
+          <div class="mb-3">
+            <label for="medicines" class="form-label">Medicines</label>
+            <textarea
+              class="form-control"
+              id="medicines"
+              name="medicines"
+            ></textarea>
+          </div>
+
+          <div class="mb-3">
+            <label for="remarks" class="form-label">Remarks</label>
+            <textarea
+              class="form-control"
+              id="remarks"
+              name="remarks"
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </form>
+    <footer class="text-center">
+      <div class="container pt-4">
+        <span class="text-center text-light">© 2025 <a class="text-light text-decoration-none" target="_blank" href="https://davpakur.in">DAV Public School, Pakur</a></span>
+      </footer>
+    <!-- scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
